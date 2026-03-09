@@ -1,0 +1,131 @@
+{
+  "personal": {
+    "name": "Vasu Bhalodi",
+    "role": "Full Stack Developer",
+    "company": "Cybercom Creation",
+    "location": "Ahmedabad, Gujarat, India",
+    "email": "vasubhalodi111@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/vasubhalodi-9a6825205",
+    "github": "https://github.com/vasubhalodi",
+    "resume": "/Profile.pdf"
+  },
+  "about": {
+    "paragraphs": [
+      "I’m a passionate and performance-driven Full Stack Developer with over 1.5 years of professional experience at Cybercom Creation, where I’ve grown from an intern into a key contributor on production-grade systems.",
+      "I bring strong expertise in building and deploying web applications using modern technologies such as Vue.js, Nuxt.js, React.js, Node.js, and GraphQL, combined with hands-on knowledge of scalable backend systems, secure APIs, and front-end architecture.",
+      "My experience extends beyond development—I’m also proficient in Docker-based deployment workflows, CI/CD automation with Jenkins and GitHub Actions, and cloud infrastructure on AWS. I take pride in writing clean, modular code and creating systems that are both maintainable and efficient."
+    ],
+    "highlights": [
+      {
+        "title": "Clean Code",
+        "description": "Writing maintainable, modular, and efficient code architectures."
+      },
+      {
+        "title": "Modern UI/UX",
+        "description": "Creating responsive and intuitive UIs using Vue/Nuxt and React."
+      },
+      {
+        "title": "Performance",
+        "description": "Managing databases like MySQL, MongoDB, and Neo4j with performance in mind."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "technologies": [
+        "React.js",
+        "Next.js",
+        "Vue.js",
+        "Nuxt.js",
+        "TypeScript",
+        "JavaScript",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "category": "Backend",
+      "technologies": [
+        "Node.js",
+        "GraphQL",
+        "REST APIs",
+        "MySQL",
+        "MongoDB",
+        "Neo4j"
+      ]
+    },
+    {
+      "category": "DevOps & Tools",
+      "technologies": [
+        "Docker",
+        "Jenkins",
+        "GitHub Actions",
+        "AWS",
+        "Git"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Cybercom Creation",
+      "duration": "August 2024 - Present",
+      "location": "Ahmedabad, Gujarat, India",
+      "description": "Contributing to the success of complex projects by creating responsive UIs, designing REST and GraphQL APIs, managing databases, and automating deployment pipelines."
+    },
+    {
+      "title": "Intern Full Stack Developer",
+      "company": "Cybercom Creation",
+      "duration": "January 2024 - July 2024",
+      "location": "Ahmedabad, Gujarat, India",
+      "description": "Started as an intern and grew into a key contributor, learning and applying modern full-stack technologies."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Marwadi University",
+      "degree": "Bachelor's degree, Information and Commutation Technology",
+      "duration": "April 2020 - April 2024"
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-Commerce Platform",
+      "description": "A full-featured e-commerce platform built with Next.js, Stripe, and PostgreSQL. Includes admin dashboard and user analytics.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Prisma"
+      ],
+      "githubUrl": "https://github.com",
+      "demoUrl": "https://example.com",
+      "color": "from-blue-500/20 to-purple-500/20"
+    },
+    {
+      "title": "Task Management App",
+      "description": "A collaborative task management tool with real-time updates using WebSockets, drag-and-drop boards, and role-based access.",
+      "tags": [
+        "React",
+        "Node.js",
+        "Socket.io",
+        "MongoDB"
+      ],
+      "githubUrl": "https://github.com",
+      "demoUrl": "https://example.com",
+      "color": "from-green-500/20 to-emerald-500/20"
+    },
+    {
+      "title": "AI Content Generator",
+      "description": "An AI-powered application that generates blog posts, social media content, and ad copy using OpenAI's API.",
+      "tags": [
+        "Next.js",
+        "OpenAI",
+        "TailwindCSS"
+      ],
+      "githubUrl": "https://github.com",
+      "demoUrl": "https://example.com",
+      "color": "from-orange-500/20 to-red-500/20"
+    }
+  ]
+}
