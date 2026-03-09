@@ -5,13 +5,15 @@ import { ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
 import profileData from "@/data/profile.json";
 import { SectionHeading } from "./ui/SectionHeading";
+import { SectionDivider } from "./ui/SectionDivider";
 
 const projectsData = profileData.projects;
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-32 relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="projects" className="py-16 relative">
+      <SectionDivider />
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16">
         <SectionHeading
           title="Featured Projects"
           subtitle="A selection of my recent work, highlighting problem-solving and technical implementation."

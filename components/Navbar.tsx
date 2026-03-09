@@ -11,7 +11,6 @@ const navLinks = [
   { name: "Experience", href: "#experience" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -44,7 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="text-2xl font-black tracking-tighter text-zinc-900">
             Vasu Bhalodi
-            <span className="text-zinc-400">.</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">.</span>
           </Link>
 
           {/* Desktop Nav */}

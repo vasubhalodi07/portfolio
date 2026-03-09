@@ -3,13 +3,15 @@
 import { motion } from "motion/react";
 import profileData from "@/data/profile.json";
 import { SectionHeading } from "./ui/SectionHeading";
+import { SectionDivider } from "./ui/SectionDivider";
 
 const experienceData = profileData.experience;
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-32 relative border-t border-zinc-100">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
+    <section id="experience" className="py-16 relative">
+      <SectionDivider />
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 pt-16">
         <SectionHeading
           title="Experience"
           subtitle="A history of my professional roles, responsibilities, and key accomplishments."

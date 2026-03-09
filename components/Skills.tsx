@@ -3,18 +3,19 @@
 import { motion } from "motion/react";
 import profileData from "@/data/profile.json";
 import { SectionHeading } from "./ui/SectionHeading";
+import { SectionDivider } from "./ui/SectionDivider";
 
 const skillsData = profileData.skills;
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-32 relative border-y border-zinc-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="skills" className="py-16 relative">
+      <SectionDivider />
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16">
         <SectionHeading
           title="Technical Skills"
           subtitle="The frameworks, tools, and technologies I use to bring ideas to life."
           chip="My Tech Stack"
-          centered
         />
 
         <div className="flex flex-col border border-zinc-200 rounded-3xl overflow-hidden bg-white shadow-sm">

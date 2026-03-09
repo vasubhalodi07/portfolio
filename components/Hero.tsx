@@ -5,6 +5,7 @@ import { ArrowRight, Download } from "lucide-react";
 import Link from "next/link";
 import profileData from "@/data/profile.json";
 import { Chip } from "./ui/Chip";
+import { Button } from "./ui/Button";
 
 export default function Hero() {
   const containerVariants = {
@@ -27,12 +28,6 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden"
     >
-      {/* Background Decorative Elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400/20 rounded-full blur-[120px] -z-10" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/20 rounded-full blur-[120px] -z-10" />
-      </div>
-
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
         <motion.div
           className="max-w-3xl"
@@ -48,8 +43,8 @@ export default function Hero() {
             variants={itemVariants}
             className="text-6xl md:text-8xl font-black tracking-tight mb-8 leading-[1.1] text-zinc-900"
           >
-            Crafting Digital <br className="hidden md:block" />
-            <span className="text-zinc-400">
+            Crafting <span className="text-zinc-800">Digital</span> <br className="hidden md:block" />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500">
               Experiences.
             </span>
           </motion.h1>
@@ -62,13 +57,14 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6">
-            <Link
-              href="#projects"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-zinc-900 text-white font-medium rounded-2xl hover:bg-zinc-800 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-900/20 group"
+            <Button
+              variant="gradient"
+              className="group"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View Work
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </Button>
             <Link
               href={profileData.personal.resume}
               target="_blank"

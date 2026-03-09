@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Code2, MonitorPlay, Zap } from "lucide-react";
 import profileData from "@/data/profile.json";
 import { SectionHeading } from "./ui/SectionHeading";
+import { SectionDivider } from "./ui/SectionDivider";
 
 const getIcon = (index: number) => {
   if (index === 0) return Code2;
@@ -19,8 +20,9 @@ const highlights = profileData.about.highlights.map((h, i) => ({
 
 export default function About() {
   return (
-    <section id="about" className="py-32 relative border-y border-zinc-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <section id="about" className="py-16 relative">
+      <SectionDivider />
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 pt-16">
         <SectionHeading
           title="About Me"
           subtitle="A brief look into my background, what drives me, and how I approach my work."
