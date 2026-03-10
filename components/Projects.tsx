@@ -7,6 +7,9 @@ import profileData from "@/data/profile.json";
 import { SectionHeading } from "./ui/SectionHeading";
 import { SectionDivider } from "./ui/SectionDivider";
 
+import { getTechIcon } from "@/lib/icons";
+import Image from "next/image";
+
 const projectsData = profileData.projects;
 
 export default function Projects() {
@@ -43,11 +46,23 @@ export default function Projects() {
                 <p className="text-zinc-600 mb-6 flex-1 font-light">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-8">
-                  {project.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 text-xs font-medium bg-white text-zinc-700 rounded-full border border-zinc-200">
-                      {tag}
-                    </span>
-                  ))}
+                  {project.tags.map(tag => {
+                    const iconPath = getTechIcon(tag);
+                    return (
+                      <span key={tag} className="px-3 py-1 text-xs font-medium bg-white text-zinc-700 rounded-full border border-zinc-200 flex items-center gap-1.5">
+                        {iconPath && (
+                          <Image
+                            src={iconPath}
+                            alt={tag}
+                            width={14}
+                            height={14}
+                            className="w-3.5 h-3.5 object-contain"
+                          />
+                        )}
+                        {tag}
+                      </span>
+                    );
+                  })}
                 </div>
 
                 <div className="flex items-center gap-4 mt-auto pt-4 border-t border-zinc-200">

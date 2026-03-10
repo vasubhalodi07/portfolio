@@ -5,6 +5,9 @@ import profileData from "@/data/profile.json";
 import { SectionHeading } from "./ui/SectionHeading";
 import { SectionDivider } from "./ui/SectionDivider";
 
+import { getTechIcon } from "@/lib/icons";
+import Image from "next/image";
+
 const skillsData = profileData.skills;
 
 export default function Skills() {
@@ -33,18 +36,30 @@ export default function Skills() {
                 <h3 className="text-lg font-medium text-zinc-900">{skillGroup.category}</h3>
               </div>
               <div className="w-full md:w-2/3 lg:w-3/4 flex flex-wrap gap-3">
-                {skillGroup.technologies.map((tech, i) => (
-                  <motion.div
-                    key={tech}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: (groupIndex * 0.1) + (i * 0.05) + 0.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-zinc-700 text-sm font-medium hover:border-zinc-300 hover:shadow-sm transition-all cursor-default flex items-center gap-2"
-                  >
-                    {tech}
-                  </motion.div>
-                ))}
+                {skillGroup.technologies.map((tech, i) => {
+                  const iconPath = getTechIcon(tech);
+                  return (
+                    <motion.div
+                      key={tech}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: (groupIndex * 0.1) + (i * 0.05) + 0.2, ease: [0.16, 1, 0.3, 1] }}
+                      className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-zinc-700 text-sm font-medium hover:border-zinc-300 hover:shadow-sm transition-all cursor-default flex items-center gap-2"
+                    >
+                      {iconPath && (
+                        <Image
+                          src={iconPath}
+                          alt={tech}
+                          width={20}
+                          height={20}
+                          className="w-5 h-5 object-contain"
+                        />
+                      )}
+                      <span>{tech}</span>
+                    </motion.div>
+                  );
+                })}
               </div>
             </motion.div>
           ))}
