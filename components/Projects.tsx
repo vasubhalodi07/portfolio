@@ -10,7 +10,16 @@ import { SectionDivider } from "./ui/SectionDivider";
 import { getTechIcon } from "@/lib/icons";
 import Image from "next/image";
 
-const projectsData = profileData.projects;
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  githubUrl?: string;
+  demoUrl?: string;
+  color: string;
+}
+
+const projectsData = profileData.projects as Project[];
 
 export default function Projects() {
   return (
@@ -43,7 +52,9 @@ export default function Projects() {
 
               <div className="p-8 flex-1 flex flex-col">
                 <h3 className="text-2xl font-semibold mb-3 text-zinc-900 group-hover:text-zinc-600 transition-colors tracking-tight">{project.title}</h3>
-                <p className="text-zinc-600 mb-6 flex-1 font-light">{project.description}</p>
+                <div className="flex-1 mb-6">
+                  <p className="text-zinc-900 font-normal line-clamp-3 overflow-hidden break-words">{project.description}</p>
+                </div>
 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map(tag => {
@@ -65,13 +76,17 @@ export default function Projects() {
                   })}
                 </div>
 
-                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-zinc-200">
-                  <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-900 transition-colors flex items-center gap-2 text-sm font-medium">
-                    <Github size={18} /> Code
-                  </Link>
-                  <Link href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-900 transition-colors flex items-center gap-2 text-sm font-medium ml-auto">
-                    <ExternalLink size={18} /> Live Demo
-                  </Link>
+                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-zinc-200 text-zinc-900 text-sm font-semibold">
+                  {project.githubUrl && (
+                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors flex items-center gap-2">
+                      <Github size={18} /> Code
+                    </Link>
+                  )}
+                  {project.demoUrl && (
+                    <Link href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors flex items-center gap-2 ml-auto">
+                      <ExternalLink size={18} /> Live Demo
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>

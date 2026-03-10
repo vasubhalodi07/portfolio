@@ -35,7 +35,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg text-zinc-600 space-y-6 leading-relaxed font-light"
+            className="text-lg text-zinc-900 space-y-6 leading-relaxed font-normal"
           >
             {profileData.about.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
@@ -57,7 +57,7 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-zinc-900">{item.title}</h3>
-                  <p className="text-zinc-500 leading-relaxed font-light">{item.description}</p>
+                  <p className="text-zinc-900 leading-relaxed font-normal">{item.description}</p>
                 </div>
               </motion.div>
             ))}

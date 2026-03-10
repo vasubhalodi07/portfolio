@@ -8,7 +8,7 @@ export function Loader({ className }: { className?: string }) {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-        className="w-8 h-8 rounded-full border-4 border-zinc-200 border-t-zinc-900"
+        className="w-8 h-8 rounded-full border-4 border-zinc-400 border-t-zinc-900"
       />
     </div>
   );

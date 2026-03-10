@@ -32,7 +32,7 @@ export function SectionHeading({ title, subtitle, chip, centered = false }: Sect
         </span>
       </h2>
       {subtitle && (
-        <p className={`text-lg text-zinc-600 font-light max-w-2xl ${centered ? "mx-auto text-center" : ""}`}>
+        <p className={`text-lg text-zinc-900 font-normal max-w-2xl ${centered ? "mx-auto text-center" : ""}`}>
           {subtitle}
         </p>
       )}

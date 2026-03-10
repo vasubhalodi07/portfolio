@@ -51,7 +51,7 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl text-zinc-500 mb-12 max-w-2xl leading-relaxed font-light"
+            className="text-xl md:text-2xl text-zinc-900 mb-12 max-w-2xl leading-relaxed font-normal"
           >
             Hello, I&apos;m <span className="font-medium text-zinc-800">{profileData.personal.name}</span>. I am a {profileData.personal.role} building modern, high-performance web applications with a focus on intuitive user interfaces and scalable backends.
           </motion.p>

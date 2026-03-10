@@ -34,17 +34,28 @@ export default function Experience() {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-zinc-900">{exp.title}</h3>
-                    <div className="text-zinc-500 font-medium mb-1">{exp.company}</div>
+                    <div className="text-zinc-900 font-semibold mb-1">{exp.company}</div>
                   </div>
-                  <div className="flex flex-col md:items-end text-sm text-zinc-500">
+                  <div className="flex flex-col md:items-end text-sm text-zinc-900">
                     <span className="font-medium bg-white text-zinc-700 font-semibold px-4 py-1.5 rounded-full shadow-sm border border-zinc-200">{exp.duration}</span>
-                    <span className="mt-2 text-zinc-400">{exp.location}</span>
+                    <span className="mt-2 text-zinc-900 font-medium">{exp.location}</span>
                   </div>
                 </div>
 
-                <p className="text-zinc-600 leading-relaxed font-light">
-                  {exp.description}
-                </p>
+                {Array.isArray(exp.description) ? (
+                  <ul className="space-y-4">
+                    {exp.description.map((point, i) => (
+                      <li key={i} className="text-zinc-900 leading-relaxed font-normal flex items-start gap-4">
+                        <div className="w-1.5 h-1.5 rounded-full bg-zinc-400 mt-[10px] flex-shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-zinc-900 leading-relaxed font-normal">
+                    {exp.description}
+                  </p>
+                )}
               </div>
             </motion.div>
           ))}

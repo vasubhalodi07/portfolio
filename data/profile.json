@@ -5,8 +5,8 @@
     "company": "Cybercom Creation",
     "location": "Ahmedabad, Gujarat, India",
     "email": "vasubhalodi111@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/vasubhalodi-9a6825205",
-    "github": "https://github.com/vasubhalodi",
+    "linkedin": "https://www.linkedin.com/in/vasu-bhalodi-9a6825205/",
+    "github": "https://github.com/vasubhalodi07",
     "resume": "/Profile.pdf",
     "icon_base_url": "https://shared-images01.s3.ap-south-1.amazonaws.com/icons/"
   },
@@ -62,7 +62,8 @@
         "Jenkins",
         "GitHub Actions",
         "AWS",
-        "Git"
+        "Git",
+        "Kubernetes"
       ]
     }
   ],
@@ -70,16 +71,25 @@
     {
       "title": "Software Engineer",
       "company": "Cybercom Creation",
-      "duration": "August 2024 - Present",
+      "duration": "July 2024 - Present",
       "location": "Ahmedabad, Gujarat, India",
-      "description": "Contributing to the success of complex projects by creating responsive UIs, designing REST and GraphQL APIs, managing databases, and automating deployment pipelines."
+      "description": [
+        "Contributed significantly to the 1StopBedrooms project, enhancing its development, performance, and success, while driving innovation.",
+        "Utilized GraphQL for efficient data querying and backend communication, optimizing data retrieval and performance load times.",
+        "Developed robust front-end applications with Vue.js and Nuxt.js, ensuring smooth, intuitive user-friendly functionality.",
+        "Focused on creating scalable, high-performance web components and ensuring seamless integration between front-end and backend services."
+      ]
     },
     {
-      "title": "Intern Full Stack Developer",
+      "title": "Full Stack Intern",
       "company": "Cybercom Creation",
-      "duration": "January 2024 - July 2024",
+      "duration": "January 2024 - June 2024",
       "location": "Ahmedabad, Gujarat, India",
-      "description": "Started as an intern and grew into a key contributor, learning and applying modern full-stack technologies."
+      "description": [
+        "Developed a strong foundation in HTML, CSS, JavaScript, and MySQL, building dynamic, responsive web applications with backend integration.",
+        "Worked with Angular, TypeScript, Vue.js, and Nuxt.js to create scalable, high-performance web solutions for various applications.",
+        "Focused on developing reusable components for improved code maintainability, efficiency, and streamlined database management."
+      ]
     }
   ],
   "education": [
@@ -91,41 +101,39 @@
   ],
   "projects": [
     {
-      "title": "E-Commerce Platform",
-      "description": "A full-featured e-commerce platform built with Next.js, Stripe, and PostgreSQL. Includes admin dashboard and user analytics.",
+      "title": "Agriculture E-commerce Platform",
+      "description": "Developed a platform with user registration, OTP authentication, and JWT token-based login for secure access and enhanced security. Implemented features for product browsing, purchasing, and payments using Razorpay, ensuring a smooth experience. Utilized React JS for the frontend and Express JS for backend APIs, while managing data with MySQL to ensure reliable database management.",
       "tags": [
-        "Next.js",
-        "TypeScript",
-        "TailwindCSS",
-        "Prisma"
+        "React JS",
+        "Express JS",
+        "MySQL",
+        "Razorpay",
+        "JWT"
       ],
-      "githubUrl": "https://github.com",
-      "demoUrl": "https://example.com",
-      "color": "from-blue-500/20 to-purple-500/20"
-    },
-    {
-      "title": "Task Management App",
-      "description": "A collaborative task management tool with real-time updates using WebSockets, drag-and-drop boards, and role-based access.",
-      "tags": [
-        "React",
-        "Node.js",
-        "Socket.io",
-        "MongoDB"
-      ],
-      "githubUrl": "https://github.com",
-      "demoUrl": "https://example.com",
       "color": "from-green-500/20 to-emerald-500/20"
     },
     {
-      "title": "AI Content Generator",
-      "description": "An AI-powered application that generates blog posts, social media content, and ad copy using OpenAI's API.",
+      "title": "Social Media API",
+      "description": "Created a RESTful API using Node.js and Neo4j to manage users, posts, comments, and friendships, leveraging the graph database. Implemented REST endpoints for profile management, post creation, commenting, and social interactions, ensuring scalability and functionality. Included Swagger for comprehensive API documentation and testing, improving usability, reliability, and ease of integration.",
       "tags": [
-        "Next.js",
-        "OpenAI",
-        "TailwindCSS"
+        "Node.js",
+        "Neo4j",
+        "REST API",
+        "Swagger"
       ],
-      "githubUrl": "https://github.com",
-      "demoUrl": "https://example.com",
+      "githubUrl": "https://github.com/vasubhalodi07/social-media-graph-db-api",
+      "color": "from-blue-500/20 to-purple-500/20"
+    },
+    {
+      "title": "AWS Nuke Desktop Tool",
+      "description": "Created a desktop application using Electron JS for managing AWS resources and automating cleanup for better cloud management. Integrated the aws-nuke CLI to efficiently remove specific AWS resources, enhancing resource control and management. Implemented a user-friendly interface for seamless AWS resource management, ensuring smooth interactions and reliable performance.",
+      "tags": [
+        "Electron JS",
+        "AWS",
+        "AWS Nuke",
+        "Desktop App"
+      ],
+      "githubUrl": "https://github.com/vasubhalodi07/aws-nuke-tool",
       "color": "from-orange-500/20 to-red-500/20"
     }
   ]

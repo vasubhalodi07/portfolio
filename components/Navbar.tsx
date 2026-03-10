@@ -83,7 +83,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-lg font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
+              className="text-lg font-semibold text-zinc-900 hover:text-blue-600 transition-colors"
             >
               {link.name}
             </Link>
