@@ -10,23 +10,34 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-100 mt-20">
-      <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-        <p className="text-zinc-900 text-sm font-semibold">
-          © {new Date().getFullYear()} Vasu Bhalodi<span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">.</span> All rights reserved.
-        </p>
-
-        <div className="flex items-center gap-6">
+    <footer className="relative mt-8">
+      <div
+        className="w-full h-px"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, rgba(99,102,241,0.5), rgba(139,92,246,0.5), transparent)",
+        }}
+      />
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col items-center md:items-start gap-0.5">
+          <p className="text-slate-400 text-sm">
+            © {new Date().getFullYear()}{" "}
+            <span className="text-slate-200 font-semibold">Vasu Bhalodi</span>
+            <span className="gradient-text">.</span>
+          </p>
+          <p className="text-slate-500 text-xs">Built with Next.js &amp; Tailwind CSS</p>
+        </div>
+        <div className="flex items-center gap-3">
           {socialLinks.map((social) => (
             <Link
               key={social.label}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-900 transition-colors"
               aria-label={social.label}
+              className="p-2.5 glass rounded-xl text-slate-400 hover:text-white transition-all duration-200 hover:scale-110 hover:border-white/20 cursor-pointer"
             >
-              <social.icon size={20} />
+              <social.icon size={16} />
             </Link>
           ))}
         </div>

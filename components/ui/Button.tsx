@@ -12,16 +12,19 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "inline-flex items-center justify-center rounded-xl font-medium transition-colors active:scale-95 transition-all gap-2",
+          "inline-flex items-center justify-center rounded-xl font-medium active:scale-95 transition-all duration-200 gap-2 cursor-pointer",
           {
-            "bg-zinc-900 text-white hover:bg-zinc-800 shadow-lg hover:shadow-xl": variant === "primary",
-            "bg-zinc-100 text-zinc-900 hover:bg-zinc-200": variant === "secondary",
-            "bg-transparent border border-zinc-200 text-zinc-800 hover:bg-zinc-50": variant === "outline",
-            "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90 shadow-lg hover:shadow-blue-500/20": variant === "gradient",
-            "px-4 py-2 text-sm": size === "sm",
-            "px-8 py-4 text-base": size === "md",
-            "px-10 py-5 text-lg rounded-2xl": size === "lg",
+            "bg-white text-zinc-900 hover:bg-zinc-100 shadow-lg": variant === "primary",
+            "text-slate-300 hover:text-white hover:bg-white/5": variant === "secondary",
+            "text-slate-300 hover:border-white/20 hover:text-white":
+              variant === "outline",
+            "bg-gradient-to-r from-indigo-600 to-violet-600 text-white hover:from-indigo-500 hover:to-violet-500 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5":
+              variant === "gradient",
+            "px-4 py-2 text-xs": size === "sm",
+            "px-7 py-3.5 text-sm": size === "md",
+            "px-10 py-5 text-base rounded-2xl": size === "lg",
           },
+          variant === "outline" && "border border-white/10",
           className
         )}
         {...props}

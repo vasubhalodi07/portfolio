@@ -9,16 +9,22 @@ export interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement | H
 
 const TextField = forwardRef<HTMLInputElement | HTMLTextAreaElement, TextFieldProps>(
   ({ className, label, multiline, rows = 5, id, ...props }, ref) => {
-    const defaultId = id || label.toLowerCase().replace(/\s+/g, '-');
+    const defaultId = id || label.toLowerCase().replace(/\s+/g, "-");
     const inputClass = cn(
-      "w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 text-zinc-900 placeholder:text-zinc-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500/50 transition-all font-semibold",
+      "w-full rounded-xl px-4 py-3 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none transition-all duration-200",
+      "focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/40",
       multiline && "resize-none",
       className
     );
 
+    const sharedStyle = {
+      background: "rgba(255,255,255,0.04)",
+      border: "1px solid rgba(255,255,255,0.08)",
+    };
+
     return (
       <div className="space-y-2 w-full">
-        <label htmlFor={defaultId} className="text-sm font-bold text-zinc-900 mb-3 ml-1">
+        <label htmlFor={defaultId} className="block text-xs font-semibold text-slate-400 ml-1">
           {label}
         </label>
         {multiline ? (
@@ -27,6 +33,7 @@ const TextField = forwardRef<HTMLInputElement | HTMLTextAreaElement, TextFieldPr
             ref={ref as React.ForwardedRef<HTMLTextAreaElement>}
             rows={rows}
             className={inputClass}
+            style={sharedStyle}
             {...(props as React.TextareaHTMLAttributes<HTMLTextAreaElement>)}
           />
         ) : (
@@ -34,6 +41,7 @@ const TextField = forwardRef<HTMLInputElement | HTMLTextAreaElement, TextFieldPr
             id={defaultId}
             ref={ref as React.ForwardedRef<HTMLInputElement>}
             className={inputClass}
+            style={sharedStyle}
             {...(props as React.InputHTMLAttributes<HTMLInputElement>)}
           />
         )}
@@ -41,6 +49,7 @@ const TextField = forwardRef<HTMLInputElement | HTMLTextAreaElement, TextFieldPr
     );
   }
 );
+
 TextField.displayName = "TextField";
 
 export { TextField };
