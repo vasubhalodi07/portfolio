@@ -35,8 +35,8 @@ export default function Skills() {
             return (
               <motion.div
                 key={skillGroup.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.55, delay: gi * 0.07, ease: [0.16, 1, 0.3, 1] }}
                 className="glass rounded-2xl p-6 relative overflow-hidden transition-all duration-300"

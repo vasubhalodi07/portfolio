@@ -55,8 +55,8 @@ export default function Contact() {
 
           {/* ── Left: contact info ── */}
           <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col gap-6"
@@ -134,8 +134,8 @@ export default function Contact() {
 
           {/* ── Right: form ── */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.75, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="glass rounded-2xl p-5 sm:p-7 md:p-10 relative overflow-hidden"

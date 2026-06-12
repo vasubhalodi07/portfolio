@@ -102,8 +102,8 @@ export default function About() {
 
           {/* Bio card — spans 2 cols on md+ */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="md:col-span-2 glass rounded-2xl p-8 relative overflow-hidden"
@@ -140,8 +140,8 @@ export default function About() {
           {highlights.map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="glass rounded-2xl p-6 relative overflow-hidden transition-all duration-300 cursor-default group"

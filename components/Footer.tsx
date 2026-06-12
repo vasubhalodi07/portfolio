@@ -25,7 +25,6 @@ export default function Footer() {
             <span className="text-slate-200 font-semibold">Vasu Bhalodi</span>
             <span className="gradient-text">.</span>
           </p>
-          <p className="text-slate-500 text-xs">Built with Next.js &amp; Tailwind CSS</p>
         </div>
         <div className="flex items-center gap-3">
           {socialLinks.map((social) => (

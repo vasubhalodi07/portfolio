@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { BackgroundAnimation } from "@/components/ui/BackgroundAnimation";
+import LenisProvider from "@/components/providers/lenis-provider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -25,8 +26,11 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased font-sans`}
       >
         <BackgroundAnimation />
-        {children}
+        <LenisProvider>
+          {children}
+        </LenisProvider>
       </body>
     </html>
   );
 }
+
