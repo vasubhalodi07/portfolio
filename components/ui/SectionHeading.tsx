@@ -1,38 +1,33 @@
-"use client";
+import React from "react";
 
-import { motion } from "motion/react";
-import { Chip } from "./Chip";
-
-interface SectionHeadingProps {
+type SectionHeadingProps = {
   title: string;
   subtitle?: string;
   chip?: string;
-  centered?: boolean;
-}
+  className?: string;
+};
 
-export function SectionHeading({ title, subtitle, chip, centered = false }: SectionHeadingProps) {
-  const words = title.split(" ");
-  const lastWord = words.pop();
-  const restOfTitle = words.join(" ");
-
+export function SectionHeading({
+  title,
+  subtitle,
+  chip,
+  className = "",
+}: SectionHeadingProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`mb-14 ${centered ? "text-center flex flex-col items-center" : ""}`}
-    >
-      {chip && <Chip className={centered ? "mb-4 mx-auto" : "mb-4"}>{chip}</Chip>}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3 tracking-tight text-white">
-        {restOfTitle ? `${restOfTitle} ` : ""}
-        <span className="gradient-text">{lastWord}</span>
+    <div className={`flex flex-col items-center text-center max-w-2xl mx-auto mb-16 ${className}`}>
+      {chip && (
+        <span className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 mb-3.5">
+          {chip}
+        </span>
+      )}
+      <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        {title}
       </h2>
       {subtitle && (
-        <p className={`text-sm text-slate-400 max-w-xl leading-relaxed ${centered ? "mx-auto text-center" : ""}`}>
+        <p className="mt-4 text-base text-slate-600 leading-relaxed">
           {subtitle}
         </p>
       )}
-    </motion.div>
+    </div>
   );
 }

@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { BackgroundAnimation } from "@/components/ui/BackgroundAnimation";
 import LenisProvider from "@/components/providers/lenis-provider";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "Vasu Bhalodi - Portfolio",
-  description: "Modern portfolio website of Vasu Bhalodi",
+  description: "Professional portfolio of Vasu Bhalodi, Full Stack Developer",
 };
 
 export default function RootLayout({
@@ -21,11 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.variable} antialiased font-sans`}
-      >
-        <BackgroundAnimation />
+    <html lang="en" className="scroll-smooth">
+      <body className={`${plusJakartaSans.className} antialiased bg-white text-slate-900`}>
         <LenisProvider>
           {children}
         </LenisProvider>
@@ -33,4 +29,3 @@ export default function RootLayout({
     </html>
   );
 }
-

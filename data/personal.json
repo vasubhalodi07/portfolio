@@ -1,0 +1,64 @@
+{
+  "name": "Vasu Bhalodi",
+  "role": "Full Stack Developer",
+  "company": "Cybercom Creation",
+  "location": "Ahmedabad, Gujarat, India",
+  "email": "vasubhalodi111@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/vasu-bhalodi-9a6825205/",
+  "github": "https://github.com/vasubhalodi07",
+  "resume": "/Profile.pdf",
+  "heroTitle": "Hello! I'm Vasu, a Software Engineer.",
+  "heroDescription": "I design and build fast, clean web applications, write solid server-side APIs, and automate cloud systems. Always focused on clean aesthetics and developer experience.",
+  "about": {
+    "paragraphs": [
+      "I'm a passionate and performance-driven Full Stack Developer with over 1.5 years of professional experience at Cybercom Creation, where I've grown from an intern into a key contributor on production-grade systems.",
+      "I bring strong expertise in building and deploying web applications using modern technologies such as Vue.js, Nuxt.js, React.js, Node.js, and GraphQL, combined with hands-on knowledge of scalable backend systems, secure APIs, and front-end architecture.",
+      "My experience extends beyond development - I'm also proficient in Docker-based deployment workflows, CI/CD automation with Jenkins and GitHub Actions, and cloud infrastructure on AWS. I take pride in writing clean, modular code and creating systems that are both maintainable and efficient."
+    ],
+    "highlights": [
+      {
+        "title": "Clean Code",
+        "description": "Writing maintainable, modular, and efficient code architectures."
+      },
+      {
+        "title": "Modern UI/UX",
+        "description": "Creating responsive and intuitive UIs using Vue/Nuxt and React."
+      },
+      {
+        "title": "Performance",
+        "description": "Managing databases like MySQL, MongoDB, and Neo4j with performance in mind."
+      }
+    ]
+  },
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Cybercom Creation",
+      "duration": "July 2024 - Present",
+      "location": "Ahmedabad, Gujarat, India",
+      "description": [
+        "Contributed significantly to the 1StopBedrooms project, enhancing its development, performance, and success, while driving innovation.",
+        "Utilized GraphQL for efficient data querying and backend communication, optimizing data retrieval and performance load times.",
+        "Developed robust front-end applications with Vue.js and Nuxt.js, ensuring smooth, intuitive user-friendly functionality."
+      ]
+    },
+    {
+      "title": "Full Stack Intern",
+      "company": "Cybercom Creation",
+      "duration": "January 2024 - June 2024",
+      "location": "Ahmedabad, Gujarat, India",
+      "description": [
+        "Developed a strong foundation in HTML, CSS, JavaScript, and MySQL, building dynamic, responsive web applications with backend integration.",
+        "Worked with Angular, TypeScript, Vue.js, and Nuxt.js to create scalable, high-performance web solutions for various applications.",
+        "Focused on developing reusable components for improved code maintainability, efficiency, and streamlined database management."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Marwadi University",
+      "degree": "Bachelor's degree, Information and Commutation Technology",
+      "duration": "April 2020 - April 2024"
+    }
+  ]
+}

@@ -1,44 +1,18 @@
-import { Github, Linkedin, Mail } from "lucide-react";
-import Link from "next/link";
-import profileData from "@/data/profile.json";
-
-const socialLinks = [
-  { icon: Github, href: profileData.personal.github, label: "GitHub" },
-  { icon: Linkedin, href: profileData.personal.linkedin, label: "LinkedIn" },
-  { icon: Mail, href: `mailto:${profileData.personal.email}`, label: "Email" },
-];
+import React from "react";
+import personalData from "@/data/personal.json";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const logoText = personalData.name.split(" ")[0].toUpperCase();
+
   return (
-    <footer className="relative mt-8">
-      <div
-        className="w-full h-px"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent, rgba(99,102,241,0.5), rgba(139,92,246,0.5), transparent)",
-        }}
-      />
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex flex-col items-center md:items-start gap-0.5">
-          <p className="text-slate-400 text-sm">
-            © {new Date().getFullYear()}{" "}
-            <span className="text-slate-200 font-semibold">Vasu Bhalodi</span>
-            <span className="gradient-text">.</span>
-          </p>
+    <footer className="border-t border-slate-100 bg-white py-8 px-6 relative z-10">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-slate-400 font-medium">
+        <div>
+          &copy; {currentYear} <span className="font-bold tracking-[0.15em] text-slate-600 uppercase">{logoText}</span>. All rights reserved.
         </div>
-        <div className="flex items-center gap-3">
-          {socialLinks.map((social) => (
-            <Link
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.label}
-              className="p-2.5 glass rounded-xl text-slate-400 hover:text-white transition-all duration-200 hover:scale-110 hover:border-white/20 cursor-pointer"
-            >
-              <social.icon size={16} />
-            </Link>
-          ))}
+        <div>
+          Designed &amp; Built with Next.js &amp; Tailwind
         </div>
       </div>
     </footer>

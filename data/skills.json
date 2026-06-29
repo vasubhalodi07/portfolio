@@ -1,0 +1,147 @@
+[
+  {
+    "name": "React.js",
+    "category": "Frontend",
+    "level": "Core",
+    "icon": "/icons/react-logo.svg",
+    "cardHover": "hover:border-sky-300 hover:shadow-sky-500/5",
+    "iconStyle": "text-sky-500 bg-sky-50 border-sky-100"
+  },
+  {
+    "name": "Next.js",
+    "category": "Frontend",
+    "level": "Core",
+    "icon": "/icons/nextjs.svg",
+    "cardHover": "hover:border-slate-400 hover:shadow-slate-500/5",
+    "iconStyle": "text-slate-900 bg-slate-50 border-slate-200"
+  },
+  {
+    "name": "Vue.js",
+    "category": "Frontend",
+    "level": "Core",
+    "icon": "/icons/vuejs.svg",
+    "cardHover": "hover:border-emerald-300 hover:shadow-emerald-500/5",
+    "iconStyle": "text-emerald-500 bg-emerald-50 border-emerald-100"
+  },
+  {
+    "name": "Nuxt.js",
+    "category": "Frontend",
+    "level": "Core",
+    "icon": "/icons/nuxtjs.svg",
+    "cardHover": "hover:border-emerald-400 hover:shadow-emerald-600/5",
+    "iconStyle": "text-emerald-600 bg-emerald-50 border-emerald-100"
+  },
+
+  {
+    "name": "JavaScript",
+    "category": "Frontend",
+    "level": "Advanced",
+    "icon": "/icons/javascript.svg",
+    "cardHover": "hover:border-yellow-400 hover:shadow-yellow-600/5",
+    "iconStyle": "text-yellow-600 bg-yellow-50 border-yellow-100"
+  },
+  {
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "level": "Advanced",
+    "icon": "/icons/tailwind.svg",
+    "cardHover": "hover:border-cyan-400 hover:shadow-cyan-500/5",
+    "iconStyle": "text-cyan-500 bg-cyan-50 border-cyan-100"
+  },
+  {
+    "name": "Node.js",
+    "category": "Backend",
+    "level": "Core",
+    "icon": "/icons/nodejs.svg",
+    "cardHover": "hover:border-green-400 hover:shadow-green-600/5",
+    "iconStyle": "text-green-600 bg-green-50 border-green-100"
+  },
+  {
+    "name": "GraphQL",
+    "category": "Backend",
+    "level": "Advanced",
+    "icon": "/icons/graphql.svg",
+    "cardHover": "hover:border-pink-400 hover:shadow-pink-500/5",
+    "iconStyle": "text-pink-500 bg-pink-50 border-pink-100"
+  },
+  {
+    "name": "REST APIs",
+    "category": "Backend",
+    "level": "Advanced",
+    "icon": "/icons/api.svg",
+    "cardHover": "hover:border-indigo-400 hover:shadow-indigo-500/5",
+    "iconStyle": "text-indigo-500 bg-indigo-50 border-indigo-100"
+  },
+  {
+    "name": "MySQL",
+    "category": "Backend",
+    "level": "Advanced",
+    "icon": "/icons/mysql.svg",
+    "cardHover": "hover:border-blue-400 hover:shadow-blue-500/5",
+    "iconStyle": "text-blue-500 bg-blue-50 border-blue-100"
+  },
+  {
+    "name": "MongoDB",
+    "category": "Backend",
+    "level": "Advanced",
+    "icon": "/icons/mongo.svg",
+    "cardHover": "hover:border-emerald-400 hover:shadow-emerald-600/5",
+    "iconStyle": "text-emerald-600 bg-emerald-50 border-emerald-100"
+  },
+  {
+    "name": "Neo4j",
+    "category": "Backend",
+    "level": "Familiar",
+    "icon": "Network",
+    "cardHover": "hover:border-indigo-400 hover:shadow-indigo-600/5",
+    "iconStyle": "text-indigo-600 bg-indigo-50 border-indigo-100"
+  },
+  {
+    "name": "Docker",
+    "category": "DevOps & Tools",
+    "level": "Advanced",
+    "icon": "/icons/docker.svg",
+    "cardHover": "hover:border-blue-400 hover:shadow-blue-500/5",
+    "iconStyle": "text-blue-500 bg-blue-50 border-blue-100"
+  },
+  {
+    "name": "Jenkins",
+    "category": "DevOps & Tools",
+    "level": "Advanced",
+    "icon": "/icons/jenkins.svg",
+    "cardHover": "hover:border-red-400 hover:shadow-red-500/5",
+    "iconStyle": "text-red-500 bg-red-50 border-red-100"
+  },
+  {
+    "name": "GitHub Actions",
+    "category": "DevOps & Tools",
+    "level": "Advanced",
+    "icon": "/icons/githubactions.svg",
+    "cardHover": "hover:border-slate-400 hover:shadow-slate-800/5",
+    "iconStyle": "text-slate-800 bg-slate-50 border-slate-200"
+  },
+  {
+    "name": "AWS",
+    "category": "DevOps & Tools",
+    "level": "Core",
+    "icon": "/icons/aws.svg",
+    "cardHover": "hover:border-orange-400 hover:shadow-orange-500/5",
+    "iconStyle": "text-orange-500 bg-orange-50 border-orange-100"
+  },
+  {
+    "name": "Git",
+    "category": "DevOps & Tools",
+    "level": "Advanced",
+    "icon": "/icons/git.svg",
+    "cardHover": "hover:border-orange-400 hover:shadow-orange-600/5",
+    "iconStyle": "text-orange-600 bg-orange-50 border-orange-100"
+  },
+  {
+    "name": "Kubernetes",
+    "category": "DevOps & Tools",
+    "level": "Familiar",
+    "icon": "/icons/kubernetes.svg",
+    "cardHover": "hover:border-blue-400 hover:shadow-blue-600/5",
+    "iconStyle": "text-blue-600 bg-blue-50 border-blue-100"
+  }
+]

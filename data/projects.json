@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Aegis ERP",
+    "category": "Enterprise Full Stack",
+    "image": "/images/projects/aegis-erp.png",
+    "description": [
+      "Enterprise order management system with Flutter mobile app, React admin and superadmin dashboards.",
+      "Node.js/Express backend with Prisma ORM, PostgreSQL, Redis, and an Electron-based Tally Agent desktop app.",
+      "Deployed on Docker Compose with Nginx, monitored via Grafana, Prometheus, and Loki."
+    ],
+    "tags": [
+      "Flutter",
+      "React",
+      "Node.js",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "Electron",
+      "Docker"
+    ],
+    "color": "from-indigo-500/20 to-blue-500/20"
+  },
+  {
+    "title": "Dr. Chatur",
+    "category": "Full Stack + Mobile",
+    "image": "/images/projects/dr-chatur.png",
+    "description": [
+      "Healthcare platform with a Flutter mobile app, React admin panel, and an Express.js backend.",
+      "Integrated Razorpay for payments, Firebase Cloud Messaging for notifications, and AWS S3 for media storage.",
+      "Built with Prisma on PostgreSQL, Redis + BullMQ for job queues, and Docker Compose + Docker Swarm for deployment."
+    ],
+    "tags": [
+      "Flutter",
+      "React",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "BullMQ",
+      "Firebase",
+      "AWS S3",
+      "Razorpay",
+      "Docker"
+    ],
+    "color": "from-emerald-500/20 to-teal-500/20"
+  },
+  {
+    "title": "Novara",
+    "category": "Full Stack E-commerce",
+    "image": "/images/projects/novara.png",
+    "description": [
+      "Full-stack e-commerce platform with a React + Vite frontend and Node.js/Express backend.",
+      "Prisma ORM with MySQL for data management, and Redis for caching.",
+      "Fully Dockerised dev environment managed via a custom shell script for consistent workflows."
+    ],
+    "tags": [
+      "React",
+      "Vite",
+      "Node.js",
+      "MySQL",
+      "Prisma",
+      "Redis",
+      "Docker"
+    ],
+    "color": "from-violet-500/20 to-purple-500/20"
+  },
+  {
+    "title": "Arrow Out",
+    "category": "Game Development",
+    "image": "/images/projects/arrow-out.png",
+    "description": [
+      "2D/3D game built with Unity using C# scripting, focused on clean scene architecture.",
+      "Designed and developed core game mechanics, player input systems using Unity's Input System.",
+      "Emphasised reusable component design and performance-friendly asset management."
+    ],
+    "tags": [
+      "Unity",
+      "C#",
+      "Game Dev",
+      "Input System"
+    ],
+    "color": "from-orange-500/20 to-red-500/20"
+  },
+  {
+    "title": "Nexus",
+    "category": "Desktop App",
+    "image": "/images/projects/nexus.png",
+    "description": [
+      "Developer desktop workspace to manage WebGL builds, Flutter projects, Docker containers, and SSH connections.",
+      "Built with Electron and Vite, with a companion landing page deployed to Vercel.",
+      "Automated cross-platform releases (macOS, Windows, Linux) via GitHub Actions and Vercel Blob Storage."
+    ],
+    "tags": [
+      "Electron",
+      "Vite",
+      "Flutter",
+      "Docker",
+      "SSH",
+      "GitHub Actions",
+      "Vercel"
+    ],
+    "color": "from-sky-500/20 to-cyan-500/20"
+  }
+]
