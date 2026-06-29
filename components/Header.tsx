@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
 import personalData from "@/data/personal.json";
@@ -8,6 +8,19 @@ import personalData from "@/data/personal.json";
 export default function Header() {
   const { name, github, linkedin, email } = personalData;
   const logoText = name.split(" ")[0].toUpperCase();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { label: "Home", href: "#home" },
@@ -36,14 +49,40 @@ export default function Header() {
   ];
 
   return (
-    <header className="relative z-10 px-4 py-4 md:py-6">
-      <div
-        className="max-w-6xl mx-auto rounded-theme px-6 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4 border bg-secondary-bg border-border-primary backdrop-blur-md"
-      >
-        {/* Logo */}
-        <Link href="#home" className="text-base font-bold tracking-[0.22em] uppercase text-slate-900 select-none">
-          {logoText}
-        </Link>
+    <header
+      className={`absolute md:fixed top-0 left-0 right-0 z-50 w-full px-6 border-b transition-all duration-300 ${
+        isScrolled
+          ? "bg-transparent border-transparent py-4 md:bg-white/80 md:border-slate-200/50 md:shadow-sm md:backdrop-blur-md md:py-3"
+          : "bg-transparent border-transparent py-4 md:py-5"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-y-3 gap-x-4 w-full">
+        {/* Top Row for Mobile: Logo & Socials */}
+        <div className="flex items-center justify-between w-full md:w-auto">
+          {/* Logo */}
+          <Link href="#home" className="text-base font-bold tracking-[0.22em] uppercase text-slate-900 select-none">
+            {logoText}
+          </Link>
+          
+          {/* Social Icons (Mobile Only) */}
+          <div className="flex items-center gap-2 md:hidden">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-full border border-slate-200/80 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-350 hover:bg-slate-50/50 transition-all duration-200 cursor-pointer"
+                  title={social.label}
+                >
+                  <Icon size={15} />
+                </a>
+              );
+            })}
+          </div>
+        </div>
 
         {/* Navigation Links */}
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
@@ -58,8 +97,8 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Social Icons */}
-        <div className="flex items-center gap-2.5">
+        {/* Social Icons (Desktop Only) */}
+        <div className="hidden md:flex items-center gap-2.5">
           {socialLinks.map((social) => {
             const Icon = social.icon;
             return (

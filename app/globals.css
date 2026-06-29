@@ -132,3 +132,12 @@ html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* Prevent hero content and QuickLinks card overlapping on short desktop/tablet screens */
+@media (min-width: 768px) and (max-height: 820px) {
+  .hero-responsive-height {
+    height: auto !important;
+    min-height: 820px !important;
+    padding-bottom: 8rem !important;
+  }
+}
